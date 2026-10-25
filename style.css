@@ -1,0 +1,307 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0b0b0b;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* ========================================
+   ÁREA PRINCIPAL DA LANDING PAGE
+======================================== */
+
+.landing-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(160, 120, 75, 0.15),
+            transparent 50%
+        ),
+        #0b0b0b;
+}
+
+/* ========================================
+   SEÇÃO DE APRESENTAÇÃO
+======================================== */
+
+.hero {
+    width: 100%;
+    max-width: 750px;
+    text-align: center;
+    padding: 50px 30px;
+}
+
+/* TÍTULO */
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #ffffff;
+    letter-spacing: -1px;
+}
+
+/* DETALHE DOURADO DO TÍTULO */
+
+.hero h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #c8a46b;
+    margin: 22px auto 0;
+    border-radius: 10px;
+}
+
+/* DESCRIÇÃO */
+
+.hero p {
+    max-width: 560px;
+    margin: 0 auto 35px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #d0d0d0;
+}
+
+/* ========================================
+   BOTÕES
+======================================== */
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+/* ESTILO GERAL DOS BOTÕES */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 54px;
+    padding: 15px 22px;
+
+    border: 1px solid #c8a46b;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* BOTÃO WHATSAPP */
+
+.btn-whatsapp {
+    background-color: #c8a46b;
+    color: #111111;
+    border-color: #c8a46b;
+}
+
+.btn-whatsapp:hover {
+    background-color: #e0c18b;
+    border-color: #e0c18b;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(200, 164, 107, 0.2);
+}
+
+/* BOTÃO DO GRUPO VIP */
+
+.btn-vip {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.btn-vip:hover {
+    background-color: #c8a46b;
+    color: #111111;
+    transform: translateY(-3px);
+}
+
+/* BOTÃO SITE EM BREVE */
+
+.btn-breve {
+    background-color: #191919;
+    color: #999999;
+    border-color: #333333;
+    cursor: default;
+}
+
+/* ========================================
+   RESPONSIVIDADE PARA CELULARES
+======================================== */
+
+@media (max-width: 600px) {
+
+    .landing-page {
+        padding: 25px 16px;
+    }
+
+    .hero {
+        padding: 35px 10px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    .botoes {
+        max-width: 100%;
+    }
+
+    .btn {
+        min-height: 52px;
+        font-size: 14px;
+    }
+}
+
+/* ========================================
+   RODAPÉ DA EVELYN BELLE VIP
+======================================== */
+
+.rodape {
+    background-color: #050505;
+    color: #ffffff;
+    padding: 45px 20px 20px;
+    border-top: 1px solid #292929;
+    text-align: center;
+}
+
+/* CONTEÚDO DO RODAPÉ */
+
+.rodape-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* LOGO EM TEXTO */
+
+.rodape-logo {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.rodape-logo span {
+    color: #c8a46b;
+}
+
+/* DESCRIÇÃO */
+
+.rodape-descricao {
+    color: #bdbdbd;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* LINKS */
+
+.rodape-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.rodape-links a {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.rodape-links a:hover {
+    color: #c8a46b;
+}
+
+/* DIREITOS AUTORAIS */
+
+.rodape-direitos {
+    border-top: 1px solid #292929;
+    padding-top: 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.rodape-direitos p {
+    color: #888888;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* CRÉDITO DO DESENVOLVEDOR */
+
+.rodape-criador {
+    margin-top: 5px;
+}
+
+.rodape-criador span {
+    color: #c8a46b;
+    font-weight: 600;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .rodape {
+        padding: 35px 16px 20px;
+    }
+
+    .rodape-logo {
+        font-size: 22px;
+    }
+
+    .rodape-links {
+        gap: 20px;
+    }
+
+    .rodape-direitos p {
+        font-size: 11px;
+    }
+
+}
